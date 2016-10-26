@@ -10,11 +10,15 @@
     android:orientation="vertical">
 
     <android.support.v7.widget.Toolbar
-        android:id="@+id/toolbar"
+        android:id="@+id/toolbar_login"
         android:layout_width="match_parent"
         android:layout_height="?actionBarSize"
         app:title="登录"
         style="@style/MyToolbar" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="100sp" />
 
     <android.support.design.widget.TextInputLayout
         android:layout_width="match_parent"
@@ -33,7 +37,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/password_edit"
-            android:imeActionId="@+id/login"
             android:hint="请输入密码："/>
     </android.support.design.widget.TextInputLayout>
 
