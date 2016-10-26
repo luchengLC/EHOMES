@@ -15,7 +15,7 @@ public class ForgetPwActivity extends AppCompatActivity {
     String id_check;
     EditText count_check_edit;
     EditText id_check_edit;
-    Button commitBtn;
+    Button findBack;
 
 
 
@@ -24,25 +24,30 @@ public class ForgetPwActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_forget_pw);
 
-        commitBtn = (Button)findViewById(R.id.commit_button);
+        findBack = (Button)findViewById(R.id.findBack);
         count_check_edit = (EditText)findViewById(R.id.count_check_edit);
         id_check_edit = (EditText)findViewById(R.id.Id_check_edit);
 
-        commitBtn.setOnClickListener(new View.OnClickListener() {
+        findBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
+                Boolean countExist = false;
+
                 count_check = count_check_edit.getText().toString();
                 id_check = id_check_edit.getText().toString();
-                if (count_check==null ){
+
+                if (count_check.length() == 0 ){
                     Toast.makeText(ForgetPwActivity.this, "账号不能空！", Toast.LENGTH_SHORT).show();
+
                 }
-                else if (id_check==null ){
+                else if (id_check.length()==0 ){
                     Toast.makeText(ForgetPwActivity.this, "身份证号不能空！", Toast.LENGTH_SHORT).show();
                 }
                 else {
-
-
+                    //test Toast
+                    Toast.makeText(ForgetPwActivity.this, "Test：findBack 按钮可以正常运行", Toast.LENGTH_SHORT).show();
+                    countExist = findBackPw(count_check,id_check);
                 }
             }
         });

@@ -33,7 +33,7 @@ public class LoginActivity extends AppCompatActivity {
 
         EditText password_edit = (EditText)findViewById(R.id.password_edit);
         EditText count_edit = (EditText)findViewById(R.id.count_edit);
-        Button login_buton = (Button) findViewById(R.id.login_button);
+        Button login_button = (Button) findViewById(R.id.login_button);
         Button register_button = (Button) findViewById(R.id.register_button);
         Button forgetPw = (Button)findViewById(R.id.forgetPw);
 
@@ -41,7 +41,7 @@ public class LoginActivity extends AppCompatActivity {
         password = count_edit.getText().toString();
 
         //登录
-        login_buton.setOnClickListener(new View.OnClickListener() {
+        login_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Boolean IsEnter = false;
@@ -92,11 +92,4 @@ public class LoginActivity extends AppCompatActivity {
 
 
 
-}
-class IsPhoneNumUtil {
-    public static boolean isMobileNumber(String phoneNumber) {
-        Pattern pattern = Pattern.compile("^(0|86|17951)?(13[0-9]|15[0-9]|17[0-9]|18[0-9]|14[0-9])[0-9]{8}$");
-        Matcher matcher = pattern.matcher(phoneNumber);
-        return matcher.matches();
-    }
 }
