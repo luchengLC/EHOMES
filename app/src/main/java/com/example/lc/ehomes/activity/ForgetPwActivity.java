@@ -37,9 +37,8 @@ public class ForgetPwActivity extends AppCompatActivity {
                 count_check = count_check_edit.getText().toString();
                 id_check = id_check_edit.getText().toString();
 
-                if (count_check.length() == 0 ){
-                    Toast.makeText(ForgetPwActivity.this, "账号不能空！", Toast.LENGTH_SHORT).show();
-
+                if (!IsPhoneNumUtil.isMobileNumber(count_check) ||count_check.length() == 0 ){
+                    Toast.makeText(ForgetPwActivity.this, "账号未填 或电话号码不正确！", Toast.LENGTH_SHORT).show();
                 }
                 else if (id_check.length()==0 ){
                     Toast.makeText(ForgetPwActivity.this, "身份证号不能空！", Toast.LENGTH_SHORT).show();

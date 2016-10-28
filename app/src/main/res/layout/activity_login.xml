@@ -27,7 +27,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/count_edit"
-            android:hint="请输入账号(手机号码)：" />
+            android:hint="请输入账号(手机号码)："
+            android:text="13411977340"/>
     </android.support.design.widget.TextInputLayout>
     
     <android.support.design.widget.TextInputLayout
@@ -37,7 +38,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/password_edit"
-            android:hint="请输入密码："/>
+            android:hint="请输入密码："
+            android:text="1234"/>
     </android.support.design.widget.TextInputLayout>
 
     <Button
