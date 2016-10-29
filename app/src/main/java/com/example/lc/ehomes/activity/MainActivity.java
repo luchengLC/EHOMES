@@ -1,5 +1,6 @@
 package com.example.lc.ehomes.activity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -15,6 +16,8 @@ import android.view.MenuItem;
 
 import com.example.lc.ehomes.R;
 
+import static java.lang.System.exit;
+
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
@@ -29,7 +32,7 @@ public class MainActivity extends AppCompatActivity
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+                Snackbar.make(view, "暂无", Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
             }
         });
@@ -82,17 +85,27 @@ public class MainActivity extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-        if (id == R.id.nav_camera) {
+        if (id == R.id.nav_notice_board) {
             // Handle the camera action
-        } else if (id == R.id.nav_gallery) {
 
-        } else if (id == R.id.nav_slideshow) {
+            Intent intent_notice_board = new Intent(MainActivity.this,NoticeBoardActivity.class);
+            startActivity(intent_notice_board);
 
-        } else if (id == R.id.nav_manage) {
 
-        } else if (id == R.id.nav_share) {
+        } else if (id == R.id.nav_property_management) {
+            Intent intent_management = new Intent(MainActivity.this,ManagementActivity.class);
+            startActivity(intent_management);
 
-        } else if (id == R.id.nav_send) {
+        } else if (id == R.id.nav_friends) {
+            Intent intent_friends = new Intent(MainActivity.this,FriendsActivity.class);
+            startActivity(intent_friends);
+
+        } else if (id == R.id.nav_setting) {
+            Intent intent_setting = new Intent(MainActivity.this,SettingActivity.class);
+            startActivity(intent_setting);
+
+        } else if (id == R.id.nav_log_out) {
+            exit(0);
 
         }
 

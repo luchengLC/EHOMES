@@ -78,8 +78,32 @@
 
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="80sp" />
+        android:layout_height="30sp" />
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/getIdentifyingCodeBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="点击获取验证码"
+            android:layout_weight="1"
+            android:background="@color/colorButtonBackground"
+            android:textColor="@color/colorButtonText"/>
+        <EditText
+            android:id="@+id/identifyingCode"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"/>
+
+
+    </LinearLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="30sp" />
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
