@@ -34,6 +34,7 @@ public class ForgetPwActivity extends AppCompatActivity {
 
                 Boolean countExist = false;
 
+
                 count_check = count_check_edit.getText().toString();
                 id_check = id_check_edit.getText().toString();
 
